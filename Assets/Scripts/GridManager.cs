@@ -32,7 +32,7 @@ public class GridManager : MonoBehaviour
 
     void UpdateTilemap()
     {
-        for (int x =0; x < grid.lenght; x++)
+        for (int x =0; x < grid.length; x++)
         {
             for (int y=0; y < grid.height; y++)
             {

@@ -6,7 +6,7 @@ public class GridMap : MonoBehaviour
 {
 
     public int height;
-    public int lenght;
+    public int length;
 
     int[,] grid;
 
@@ -15,7 +15,7 @@ public class GridMap : MonoBehaviour
     {
         grid = new int[lenght, height];
 
-        this.lenght = lenght;
+        this.length = lenght;
         this.height = height;
     }
 
@@ -41,7 +41,7 @@ public class GridMap : MonoBehaviour
 
     public bool CheckPosition(int x, int y)
     {
-        if (x < 0 || x >= lenght)
+        if (x < 0 || x >= length)
         {
             return false;
         }
@@ -51,6 +51,11 @@ public class GridMap : MonoBehaviour
         }
 
         return true;
+    }
+
+    internal bool CheckWalkable(int xPos, int yPos)
+    {
+        return grid[xPos, yPos] == 0;
     }
 
 }
